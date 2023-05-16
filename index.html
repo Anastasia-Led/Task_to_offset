@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Форма отправки задачи</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<h1>Форма оформления заказа</h1>
+
+<form id="order-form">
+<label for="manager-select">Менеджер:</label>
+<select id="manager-select" required>
+<option value="Выберите Менеджера">Менеджер</option>
+<option value="Ермакова А.С.">Ермакова А.С.</option>
+<option value="Каратаев Д.К.">Каратаев Д.К.</option>
+<option value="Лосев И.Н.">Лосев И.Н.</option>
+</select>
+
+<label for="last-name-input">Фамилия:</label>
+<input type="text" id="last-name-input" required>
+
+<label for="first-name-input">Имя:</label>
+<input type="text" id="first-name-input" required>
+
+<label for="patronymic-input">Отчество:</label>
+<input type="text" id="patronymic-input">
+
+<label for="urgency-select">Уровень срочности:</label>
+<select id="urgency-select" required>
+<option value="">Выберите уровень срочности</option>
+<option value="очень срочно">Очень срочно</option>
+<option value="не срочно">Не срочно</option>
+<option value="может подождать">Может подождать</option>
+</select>
+
+<label for="deadline-input">Дедлайн:</label>
+<input type="date" id="deadline-input" required>
+
+<label for="description-textarea">Описание задачи:</label>
+<textarea id="description-textarea" required></textarea>
+
+<label for="approval-select">Согласование:</label>
+<select id="approval-select" required>
+<option value="">Выберите согласующего</option>
+<option value="Иванов И.И.">Иванов И.И.</option>
+<option value="Павлов П.А.">Павлов П.А.</option>
+<option value="Корнеев К.Л.">Корнеев К.Л.</option>
+</select>
+
+<button class="form-button">Сформировать заказ</button>
+</form>
+
+<div id="order-preview-modal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<h2>Предварительный просмотр заказа</h2>
+<p id="order-preview"></p>
+<button id="confirm-button">Подтвердить</button>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
